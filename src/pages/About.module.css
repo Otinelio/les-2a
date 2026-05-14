@@ -1,0 +1,208 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 50vh;
+  margin-top: -64px; /* Pull up to go under nav */
+  background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(31,31,31,0.4), rgba(31,31,31,0.8));
+  z-index: 1;
+}
+
+.heroTitle {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-title);
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--bg-light);
+  text-align: center;
+}
+
+/* History Section */
+.historySection {
+  background-color: var(--bg-light);
+  padding: 80px 0;
+}
+
+.historyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .historyContainer {
+    flex-direction: row;
+    gap: 64px;
+  }
+}
+
+.historyText {
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-dark);
+}
+
+.historyImageWrapper {
+  flex: 1;
+  width: 100%;
+}
+
+.historyImage {
+  width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+  filter: saturate(1.1);
+}
+
+/* Citation Section */
+.citationSection {
+  background-color: var(--bg-dark);
+  padding: 80px 0;
+}
+
+.citationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.citation {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 32px;
+  color: var(--bg-light);
+  max-width: 700px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .citation {
+    font-size: 40px;
+  }
+}
+
+.decorativeLine {
+  width: 60px;
+  height: 2px;
+  background-color: var(--primary-accent);
+}
+
+/* Locations Section */
+.locationsSection {
+  background-color: var(--bg-light);
+  padding: 80px 0;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 48px;
+  color: var(--text-dark);
+}
+
+.locationsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .locationsGrid {
+    flex-direction: row;
+  }
+}
+
+.locationCard {
+  flex: 1;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  transition: box-shadow 200ms ease;
+}
+
+.locationCard:hover {
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+.locationIcon {
+  margin-bottom: 16px;
+}
+
+.locationCard h3 {
+  font-family: var(--font-title);
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.locationCard p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Values Section */
+.valuesSection {
+  background-color: var(--bg-light);
+  padding: 0 0 80px 0;
+}
+
+.valuesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .valuesGrid {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.valueItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.valueItem h3 {
+  font-family: var(--font-title);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Scroll Reveals */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms ease-out, transform 600ms ease-out;
+}
+
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
